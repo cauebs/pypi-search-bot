@@ -53,7 +53,7 @@ def error_callback(bot, update, error):
 if __name__ == '__main__':
     logging.basicConfig(format='[%(asctime)s] %(message)s')
 
-    updater = Updater('428095228:AAEJDcz_tsc1XfQfUpfjP8VbKptvFiPeFh0')
+    updater = Updater(TOKEN)
     updater.dispatcher.add_error_handler(error_callback)
     updater.dispatcher.add_handler(InlineQueryHandler(inlinequery))
 
