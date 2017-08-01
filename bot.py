@@ -1,4 +1,3 @@
-from functools import lru_cache
 from pip.commands import SearchCommand
 from telegram import InlineQueryResultArticle as InlineResult
 from telegram import InputTextMessageContent, ParseMode
@@ -15,7 +14,6 @@ def escape_markdown(text):
     return re.sub(r'([%s])' % escape_chars, r'\\\1', text)
 
 
-@lru_cache()
 def search(query, args=[]):
     command = SearchCommand()
     options, _ = command.parse_args(args)
